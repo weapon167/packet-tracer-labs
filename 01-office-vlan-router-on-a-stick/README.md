@@ -24,13 +24,12 @@ Base network `192.168.10.0/24`, sized by VLSM to each department's host count:
 ## Progress So Far
 
 - [x] Devices placed and cabled (router, switch, 4 PCs)
-- [ ] VLANs created and named on the switch
-- [ ] Access ports assigned to each VLAN
-- [ ] Trunk port configured between switch and router
-- [ ] Router sub-interfaces configured (encapsulation + IP addressing)
-- [ ] PC IP configuration (static or DHCP) set per department
+- [x] VLANs created and named on the switch
+- [x] Access ports assigned to each VLAN
+- [x] Trunk port configured between switch and router
+- [x] Router sub-interfaces configured (encapsulation + IP addressing)
+- [x] PC IP configuration (static or DHCP) set per department
 - [ ] Inter-VLAN connectivity verified (ping between departments)
-
 ## Why Router-on-a-Stick
 
 Rather than giving the router one physical interface per department (expensive and doesn't scale), this design uses 802.1Q VLAN tagging over a single trunk link, with the router's sub-interfaces each handling one VLAN's traffic and acting as that VLAN's gateway.
